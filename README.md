@@ -6,10 +6,10 @@
 - [Project Structure](#project-structure)
 - [Project Documentation](#project-documentation)
 
-### Deskripsi Program
+## Deskripsi Program
 Aplikasi web sederhana yang terdiri dari basis data MySQL, API dengan Node.js (Express.js), dan antarmuka HTML + JavaScript.
 
-### Project Structure
+## Project Structure
 ```
 ├── db/
 │   ├── db.js                          # Konfigurasi dan inisialisasi koneksi ke MySQL
@@ -25,7 +25,7 @@ Aplikasi web sederhana yang terdiri dari basis data MySQL, API dengan Node.js (E
 ├── README.md                          # Dokumentasi utama proyek
 ```
 
-### Project Documentation
+## Project Documentation
 | Page | Screenshot |
 |---|---|
 | **Input Data** |<img width="1919" height="1003" alt="image" src="https://github.com/user-attachments/assets/862f22be-f19c-4d84-8b07-aa1cda09aed4" />|
