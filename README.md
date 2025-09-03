@@ -28,6 +28,7 @@ Aplikasi web sederhana yang terdiri dari basis data MySQL, API dengan Node.js (E
 ## Project Documentation
 | Page | Screenshot |
 |---|---|
-| **Input Data** |<img width="1919" height="1003" alt="image" src="https://github.com/user-attachments/assets/862f22be-f19c-4d84-8b07-aa1cda09aed4" />|
-| **Daftar Data** |<img width="1919" height="955" alt="image" src="https://github.com/user-attachments/assets/fdcce1c3-59a2-4c11-a645-70698328de99" />|
-| **Daftar Data di Database** |<img width="1919" height="1004" alt="image" src="https://github.com/user-attachments/assets/648e3610-c7b4-4a38-b8af-cc6b12db56b8" />|
+| **Input Page** |<img width="1919" height="1005" alt="image" src="https://github.com/user-attachments/assets/10ec4494-5fe5-4353-bf8e-6eb3b9369aba" />|
+| **Input Data** |<img width="1919" height="1009" alt="image" src="https://github.com/user-attachments/assets/91ff13f9-d1a4-4835-aeaf-c2ad94c31786" />|
+| **Daftar Data** |<img width="1919" height="1007" alt="image" src="https://github.com/user-attachments/assets/7f209322-e3ed-4507-a4ca-7be468ce6ddf" />|
+| **Daftar Data di Database** |<img width="1918" height="1008" alt="image" src="https://github.com/user-attachments/assets/7f722711-a980-4ecf-98bd-893e7cf5c1e1" />|
