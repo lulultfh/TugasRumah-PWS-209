@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Form Input Data</title>
+    <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+    <div class="container">
+        <h2>Input Data Baru</h2>
+        <form id="recordForm" enctype="multipart/form-data">
+            <div class="form-group">
+                <label for="nama">Nama:</label>
+                <input type="text" id="nama" name="nama" required>
+            </div>
+            <div class="form-group">
+                <label for="tinggi_badan">Tinggi Badan (cm):</label>
+                <input type="number" id="tinggi_badan" name="tinggi_badan" required>
+            </div>
+            <div class="form-group">
+                <label for="tanggal">Tanggal:</label>
+                <input type="date" id="tanggal" name="tanggal" required>
+            </div>
+            <div class="form-group">
+                <label for="gambar">Gambar:</label>
+                <input type="file" id="gambar" name="gambar" accept="image/*" required>
+            </div>
+            <button type="submit" class="btn">Simpan Data</button>
+        </form>
+        <div id="message" class="message"></div>
+        <p class="link-to-list"><a href="daftar.html">Lihat Daftar Data</a></p>
+    </div>
+
+    <script>
+        document.getElementById('recordForm').addEventListener('submit', async function(event) {
+            event.preventDefault();
+            const form = event.target;
+            const formData = new FormData(form);
+            const messageElement = document.getElementById('message');
+
+            try {
+                const response = await fetch('http://localhost:3006/api/records', {
+                    method: 'POST',
+                    body: formData
+                });
+                
+                const result = await response.json();
+                
+                if (response.ok) {
+                    messageElement.textContent = result.message;
+                    messageElement.className = 'message success';
+                    form.reset();
+                } else {
+                    messageElement.textContent = `Error: ${result.error || response.statusText}`;
+                    messageElement.className = 'message error';
+                }
+            } catch (error) {
+                console.error('Error:', error);
+                messageElement.textContent = 'Terjadi kesalahan saat mengirim data.';
+                messageElement.className = 'message error';
+            }
+        });
+    </script>
+</body>
+</html>

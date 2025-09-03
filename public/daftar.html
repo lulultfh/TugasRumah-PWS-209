@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Daftar Data</title>
+    <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+    <div class="container">
+        <h2>Daftar Data</h2>
+        <a href="index.html" class="btn">Kembali ke Form Input</a>
+        <table id="dataTable">
+            <thead>
+                <tr>
+                    <th>ID</th>
+                    <th>Nama</th>
+                    <th>Tinggi Badan</th>
+                    <th>Tanggal</th>
+                    <th>Gambar</th>
+                </tr>
+            </thead>
+            <tbody>
+                </tbody>
+        </table>
+        <p id="loading-message">Memuat data...</p>
+    </div>
+
+    <script>
+        async function fetchRecords() {
+            const tableBody = document.querySelector('#dataTable tbody');
+            const loadingMessage = document.getElementById('loading-message');
+            tableBody.innerHTML = '';
+            loadingMessage.style.display = 'block';
+
+            try {
+                const response = await fetch('http://localhost:3006/api/records');
+                const records = await response.json();
+                
+                loadingMessage.style.display = 'none';
+
+                if (records.length === 0) {
+                    tableBody.innerHTML = '<tr><td colspan="5">Tidak ada data.</td></tr>';
+                    return;
+                }
+
+                records.forEach(record => {
+                    const row = document.createElement('tr');
+                    
+                    row.innerHTML = `
+                        <td>${record.id}</td>
+                        <td>${record.nama}</td>
+                        <td>${record.tinggi_badan} cm</td>
+                        <td>${new Date(record.tanggal).toLocaleDateString('id-ID')}</td>
+                        <td><img src="http://localhost:3006/${record.gambar}" alt="Gambar ${record.nama}"></td>
+                    `;
+                    
+                    tableBody.appendChild(row);
+                });
+            } catch (error) {
+                console.error('Gagal mengambil data:', error);
+                loadingMessage.textContent = 'Gagal memuat data. Silakan coba lagi.';
+            }
+        }
+        
+        fetchRecords();
+    </script>
+</body>
+</html>
