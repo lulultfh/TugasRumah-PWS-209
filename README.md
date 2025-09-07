@@ -34,7 +34,7 @@ Aplikasi web sederhana yang terdiri dari basis data MySQL, API dengan Node.js (E
    ```
 2. Set Up MySQL Workbench
    - Buat database di MySQL Workbench dengan nama `biodata-db`
-   - Import file data-baru.sql dari repository ini
+   - Import file `data-baru.sql` dari repository ini
 3. Set Up Env
    - Buka file `.env` di root project.
    - Sesuaikan PORT, DB_HOST, DB_USER, dan DB_PASSWORD dengan konfigurasi MySQL Workbench kamu
