@@ -45,7 +45,7 @@ Aplikasi web sederhana yang terdiri dari basis data MySQL, API dengan Node.js (E
    ```
 6. Run Project
    ```
-   node server.js
+   node index.js
    ```
 
 ## Project Documentation
