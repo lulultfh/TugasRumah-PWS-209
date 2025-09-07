@@ -4,6 +4,7 @@
 ## Table of Content
 - [Deskripsi Program](#deskripsi-program)
 - [Project Structure](#project-structure)
+- [How to Run](#how-to-run)
 - [Project Documentation](#project-documentation)
 
 ## Deskripsi Program
@@ -24,6 +25,27 @@ Aplikasi web sederhana yang terdiri dari basis data MySQL, API dengan Node.js (E
 ├── index.js                           # Entry point server Express
 └── README.md                          # Dokumentasi utama proyek
 ```
+
+## How to Run
+1. Clone Repository (Jalankan di dalam WSL)
+   ```
+   git clone https://github.com/lulultfh/TugasRumah-PWS-209.git
+   cd TugasRumah-PWS-209
+   ```
+2. Set Up MySQL Workbench
+   - Buat database di MySQL Workbench dengan nama `biodata-db`
+   - Import file data-baru.sql dari repository ini
+3. Set Up Env
+   - Buka file `.env` di root project.
+   - Sesuaikan PORT, DB_HOST, DB_USER, dan DB_PASSWORD dengan konfigurasi MySQL Workbench kamu
+5. Install dependencies
+   ```
+   npm install
+   ```
+6. Run Project
+   ```
+   node server.js
+   ```
 
 ## Project Documentation
 | Page | Screenshot |
