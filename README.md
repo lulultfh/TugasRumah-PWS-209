@@ -23,6 +23,7 @@ Aplikasi web sederhana yang terdiri dari basis data MySQL, API dengan Node.js (E
 ├── uploads/                           # Untuk menyimpan gambar yang diunggah
 ├── .env
 ├── index.js                           # Entry point server Express
+├── index.js                           # Database
 └── README.md                          # Dokumentasi utama proyek
 ```
 
